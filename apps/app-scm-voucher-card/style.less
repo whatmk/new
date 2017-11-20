@@ -1,0 +1,236 @@
+.app-scm-voucher-card {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: #666;
+
+    .ant-form-item-label label, h1 {
+        color: #666;
+    }
+    h1 {
+        font-size: 21px;
+        font-weight: 400;
+    }
+    .mkicon {
+        font-size: 22px;
+    }
+    &-iconbutton {
+        padding: 0 4px !important;
+    }
+    &-cell-left {
+        padding-left: 8px;
+        justify-content: flex-start;
+    }
+    &-cell-right {
+        padding-right: 8px;
+        justify-content: flex-end;
+    }
+    &-cell {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &>div {
+            width: 100%;
+            height: 100%;
+            input {
+                height: 100%;
+            }
+        }
+        /*input{
+            height: 40px;
+        }*/
+        .ant-select-selection {
+            height: 100%
+        }
+        .ant-select-selection__rendered {
+            height: 100%
+        }
+        .ant-select-selection-selected-value {
+            line-height: 40px;
+        }
+    }
+    &-cell-disabled {
+        //background-color: #eee
+        cursor: not-allowed;
+    }
+    .ant-tabs-bar {
+        margin-bottom: 0px;
+    }
+    &-header {
+        flex-direction: row;
+        height: 50px;
+        flex: 0 0 40px;
+        overflow: hidden;
+        &-left {
+            flex-direction: row;
+            align-items: center;
+            &>.mk-btn {
+                margin-left: 10px;
+            }
+        }
+        &-right {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+            .mk-btn {
+                margin-left: 10px
+            }
+        }
+    }
+    &-title {
+        flex: 0 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        &-left {
+            flex: 0 0 300px;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 10px;            
+            display: flex;
+            flex-direction: row;
+            overflow: visible;
+            img{
+                zoom: 50%;
+                padding: 0 8px 0 8px;
+            }
+        }
+        &-right {
+            flex: 0 0 300px;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10px;
+            .code {
+                line-height: 18px;
+                height: 18px;
+                width: 120px;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+                color: rgb(204, 204, 204);
+            }
+        }
+    }
+    &-form-header {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 18px;
+        .mk-form-item {
+            margin-bottom: 5px;
+            width: 25%;
+        }
+        .ant-form-item-label {
+            padding: 0px;
+            width: 85px;
+        }
+        .ant-form-item-control-wrapper {
+            width: 150px;
+            height:32px;
+        }
+        .mk-select {
+            width: 100%;
+        }
+        .mk-datepicker {
+            width: 100%;
+        }
+        .ant-form-explain {
+            margin-top: 5px;
+        }
+        &-remark {
+            width: 100% !important;
+            .ant-form-item-control-wrapper {
+                width: 800px;
+            }
+        }
+    }
+    &-form-details {
+        flex: 1;
+        margin: 8px 0;
+        .public_fixedDataTable_header .public_fixedDataTableCell_main {
+            background: #f6f7f8 linear-gradient(#f6f7f8,#f6f7f8);
+            color: #666;
+        }
+        .public_fixedDataTable_main {
+            border: 1px solid #efefef;
+            .public_fixedDataTableRow_highlighted {
+                border-top: 1px solid #efefef;
+                border-bottom: 1px solid #efefef;
+            }
+            .fixedDataTableLayout_header .mk-datagrid-cellContent {
+                font-weight: 700;
+                font-size: 13px;
+            }
+        }
+    }
+    &-form-footer {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .ant-form-item-label {
+            width: 100px;
+        }
+        .ant-form-item-control-wrapper {
+            width: 200px;
+        }
+        .mk-select {
+            width: 100%;
+        }
+
+        &-settlement, &-advance, &-balance{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            .ant-form-item-control-wrapper {
+                width: 150px;
+            }
+        }
+        &-settlement {
+          align-items: flex-start;
+        }
+        &-advance {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+    &-footer {
+        flex-direction: row;
+        .mk-form-item {
+            margin-bottom: 0;
+            display: flex;
+        }
+    }
+    &-footer-left {
+        /*padding: 10px;
+        flex: 0 0 auto;*/
+        overflow: hidden;
+        flex-direction: row;
+
+        .ant-form-item-control-wrapper {
+            display: inline-block;
+        }
+        .ant-form-item-label, .ant-form-item-control {
+            line-height: normal;
+        }
+        .ant-form-item-label, .ant-form-item-control-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &-footer-right {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        overflow: hidden;
+        .mk-btn {
+            margin-left: 10px
+        }
+    }
+}
