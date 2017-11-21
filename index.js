@@ -20,6 +20,7 @@ import edfx_app_sale_widget from './apps/edfx-app-dashboard-analysis/apps/edfx-a
 import edfx_app_trade_widget from './apps/edfx-app-dashboard-analysis/apps/edfx-app-trade-widget/index.js'
 import edfx_app_visit_widget from './apps/edfx-app-dashboard-analysis/apps/edfx-app-visit-widget/index.js'
 import edfx_app_dashboard_analysis from './apps/edfx-app-dashboard-analysis/index.js'
+import edfx_app_fixedtable from './apps/edfx-app-fixedtable/index.js'
 import edfx_app_home_chart from './apps/edfx-app-home/apps/edfx-app-home-chart/index.js'
 import edfx_app_home_list from './apps/edfx-app-home/apps/edfx-app-home-list/index.js'
 import edfx_app_home_shortcuts from './apps/edfx-app-home/apps/edfx-app-home-shortcuts/index.js'
@@ -29,6 +30,7 @@ import edfx_app_portal from './apps/edfx-app-portal/index.js'
 import edfx_app_agreement from './apps/edfx-app-register/apps/mk-app-agreement/index.js'
 import edfx_app_register from './apps/edfx-app-register/index.js'
 import edfx_app_root from './apps/edfx-app-root/index.js'
+import edfx_app_table from './apps/edfx-app-table/index.js'
 import edfx_app_proof_of_charge from './apps/fi/addVoucher/index.js'
 
 const apps = {
@@ -51,6 +53,7 @@ const apps = {
 	[edfx_app_trade_widget.name]: edfx_app_trade_widget,	
 	[edfx_app_visit_widget.name]: edfx_app_visit_widget,	
 	[edfx_app_dashboard_analysis.name]: edfx_app_dashboard_analysis,	
+	[edfx_app_fixedtable.name]: edfx_app_fixedtable,	
 	[edfx_app_home_chart.name]: edfx_app_home_chart,	
 	[edfx_app_home_list.name]: edfx_app_home_list,	
 	[edfx_app_home_shortcuts.name]: edfx_app_home_shortcuts,	
@@ -60,6 +63,7 @@ const apps = {
 	[edfx_app_agreement.name]: edfx_app_agreement,	
 	[edfx_app_register.name]: edfx_app_register,	
 	[edfx_app_root.name]: edfx_app_root,	
+	[edfx_app_table.name]: edfx_app_table,	
 	[edfx_app_proof_of_charge.name]: edfx_app_proof_of_charge,
 }
 

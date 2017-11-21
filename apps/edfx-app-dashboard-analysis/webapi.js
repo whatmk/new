@@ -171,7 +171,6 @@ export default {
     analysis: {
         //query: (option) => fetch.post('/v1/analysis/query', option)
         query: (option) => {
-            debugger
             initMockData()
             return {
                 result: true,

@@ -151,12 +151,12 @@ function config(options) {
 					name: '统计报表',
 					children: [{
 						key: '20406',
-						name: '采购入库单',
-						appName: 'edfx-app-report'
+						name: '采购入库单-table',
+						appName: 'edfx-app-table'
 					}, {
 						key: '20407',
-						name: '采购入库单列表',
-						appName: 'edfx-app-report'
+						name: '采购入库单列表-fixedtable',
+						appName: 'edfx-app-fixedtable'
 					}]
 
 				}, {
