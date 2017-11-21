@@ -8,7 +8,7 @@ import utils from 'mk-utils'
 import extend from './extend'
 import consts from './consts'
 
-import decorator from '../edfx-app-decorator/index'
+import {FormDecorator} from 'mk-component'
 
 
 class action {
@@ -488,7 +488,7 @@ class action {
 export default function creator(option) {
     const metaAction = new MetaAction(option),
         extendAction = extend.actionCreator({ ...option, metaAction }),
-        voucherAction = decorator.actionCreator({ ...option, metaAction }),
+        voucherAction = FormDecorator.actionCreator({ ...option, metaAction }),
         o = new action({ ...option, metaAction, extendAction, voucherAction }),
         ret = { ...metaAction, ...extendAction.gridAction, ...voucherAction, ...o }
 

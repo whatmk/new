@@ -6,7 +6,7 @@ import moment from 'moment'
 import utils from 'mk-utils'
 import extend from './extend'
 import consts from './consts'
-import decorator from '../edfx-app-decorator/index'
+import {FormDecorator} from 'mk-component'
 
 import index from './index'
 
@@ -208,7 +208,7 @@ class reducer {
 export default function creator(option) {
     const metaReducer = new MetaReducer(option),
         extendReducer = extend.reducerCreator({ ...option, metaReducer }),
-        voucherReducer = decorator.reducerCreator({ ...option, metaReducer }),
+        voucherReducer = FormDecorator.reducerCreator({ ...option, metaReducer }),
         o = new reducer({ ...option, metaReducer, extendReducer, voucherReducer })
 
     return { ...metaReducer, ...extendReducer.gridReducer, ...o }

@@ -4,7 +4,7 @@ import { List, fromJS } from 'immutable'
 import moment from 'moment'
 import config from './config'
 
-import decorator from '../../index'
+import { formDecorator } from 'mk-component'
 
 class action {
     constructor(option) {
@@ -33,11 +33,11 @@ class action {
     load = async () => {
         const payload = {}
 
-        var response = await this.webapi.department.query()
-        payload.departments = response
+        var response = await this.webapi.project.query()
+        payload.project = response
 
         if (this.component.props.personId || this.component.props.personId == 0) {
-            response = await this.webapi.department.findById(this.component.props.personId)
+            response = await this.webapi.project.findById(this.component.props.personId)
             payload.person = response
         }
 
@@ -59,14 +59,14 @@ class action {
 
         if (!ok) return false
         if (form.id || form.id == 0) {
-            const response = await this.webapi.department.update(form)
+            const response = await this.webapi.project.update(form)
             if (response) {
                 this.metaAction.toast('success', '保存成功')
                 return response
             }
 
         } else {
-            const response = await this.webapi.department.create(form)
+            const response = await this.webapi.project.create(form)
             if (response) {
                 this.metaAction.toast('success', '保存成功')
                 return response
@@ -94,7 +94,7 @@ class action {
 
 export default function creator(option) {
     const metaAction = new MetaAction(option),
-        voucherAction = decorator.actionCreator({ ...option, metaAction }),
+        voucherAction = formDecorator.actionCreator({ ...option, metaAction }),
         o = new action({ ...option, metaAction, voucherAction }),
         ret = { ...metaAction, ...voucherAction, ...o }
 

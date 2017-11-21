@@ -7,7 +7,7 @@ export default {
 	description: "app-scm-voucher-card",
 	meta: data.getMeta(),
 	components: [],
-	dependencies:['mk-aar-grid'],
+	//dependencies:['mk-aar-grid'],
 	config: config,
 	load: (cb) => {
 		require.ensure([], require => {

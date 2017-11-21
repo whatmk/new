@@ -4,8 +4,7 @@ import { List, fromJS } from 'immutable'
 import moment from 'moment'
 import config from './config'
 
-import decorator from '../../index'
-
+import { formDecorator } from 'mk-component'
 class action {
     constructor(option) {
         this.metaAction = option.metaAction
@@ -136,7 +135,7 @@ class action {
 
 export default function creator(option) {
     const metaAction = new MetaAction(option),
-        voucherAction = decorator.actionCreator({ ...option, metaAction }),
+        voucherAction = formDecorator.actionCreator({ ...option, metaAction }),
         o = new action({ ...option, metaAction,voucherAction }),
         ret = { ...metaAction, ...voucherAction, ...o }
 
